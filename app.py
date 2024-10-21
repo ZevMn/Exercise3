@@ -13,6 +13,6 @@ def submit():
     input_age = request.form.get("age")
     input_year = request.form.get("year")
     years_since_graduation = 2024 - int(input_year)
-    return render_template("hello.html", name=input_name, age=input_age,
+    return render_template("hello.html", name=input_name, age=input_age,   
 
                            years=years_since_graduation)
