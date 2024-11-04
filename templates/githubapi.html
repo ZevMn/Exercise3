@@ -9,6 +9,44 @@
     </form>
     {% if username %}
         <h2>Showing result for Github user {{username}}</h2>
+
+        <table>
+            <tr>
+                <th>Repo name</th>
+                <th>Last updated</th>
+                <th>Git commits URL</th>
+                <th>Commit hash</th>
+                <th>Commit author</th>
+                <th>Commit date</th>
+                <th>Commit message</th>
+            </tr>
+
+            {% for row in data %}
+            <tr>
+                <td>
+                    {{row['repo_name']}}
+                </td>
+                <td>
+                    {{row['last_updated']}}
+                </td>
+                <td>
+                    {{row['commits_url']}}
+                </td>
+                <td>
+                    {{row['hash']}}
+                </td>
+                <td>
+                    {{row['author']}}
+                </td>
+                <td>
+                    {{row['date']}}
+                </td>
+                <td>
+                    {{row['commits_msg']}}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
     {% endif %}
 </main>
 
