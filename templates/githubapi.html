@@ -1,0 +1,15 @@
+<!DOCTYPE htmpl>
+<html>
+
+<main>
+    <h1>Check out a Github user</h1>
+    <form method="post">
+        <input type="text" placeholder="Enter Github username" name="ghubusername">
+        <button type="submit">Search for user</button>
+    </form>
+    {% if username %}
+        <h2>Showing result for Github user {{username}}</h2>
+    {% endif %}
+</main>
+
+</html>
